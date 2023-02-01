@@ -14,9 +14,38 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        'heading' => 'Jukebox'
+    ]);
 });
 
-Route::get('/home', function () {
-    return view('home');
+Route::get('/genres', function () {
+    return view('genres', [
+        'heading' => 'Jukebox Genres',
+        'genrelist' => [
+        [
+            'id' => '1',
+            'title' => 'pop' 
+        ],
+        
+        [
+            'id' => '2',
+            'title' => 'edm'
+        ],
+       
+        [
+            'id' => '3',
+            'title' => 'rock'
+        ],
+        
+        [
+            'id' => '4',
+            'title' => 'hardstyle'
+        ],
+        
+        [
+            'id' => '5',
+            'title' => 'kpop'
+        ]
+    ]]);
 });
