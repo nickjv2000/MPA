@@ -1,3 +1,3 @@
 <h1><center>{{$heading}}</center></h1>
 
-<center><a href="genres">Genres</a></center>
+<center><h2><a href="genres">Genres</a></h2></center>

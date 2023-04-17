@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Genres;
+use App\Models\Selection;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,33 +20,19 @@ Route::get('/', function () {
     ]);
 });
 
+// All Genres
 Route::get('/genres', function () {
     return view('genres', [
         'heading' => 'Jukebox Genres',
-        'genrelist' => [
-        [
-            'id' => '1',
-            'title' => 'pop' 
-        ],
+        'genreAll' => Genres::All(),
         
-        [
-            'id' => '2',
-            'title' => 'edm'
-        ],
-       
-        [
-            'id' => '3',
-            'title' => 'rock'
-        ],
-        
-        [
-            'id' => '4',
-            'title' => 'hardstyle'
-        ],
-        
-        [
-            'id' => '5',
-            'title' => 'kpop'
-        ]
-    ]]);
+    ]);
+});
+
+// Single Genre
+Route::get('/genres/{id}', function($id) {
+    return view('genres', [
+        'heading' => 'Chosen Genre',
+        'genre' => Genres::find($id)
+    ]);
 });
