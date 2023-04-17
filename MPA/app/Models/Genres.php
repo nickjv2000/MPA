@@ -6,27 +6,32 @@
 		return [
         [
             'id' => '1',
-            'title' => 'pop' 
+            'title' => 'pop',
+            'songs' => 'a' 
         ],
         
         [
             'id' => '2',
-            'title' => 'edm'
+            'title' => 'edm',
+            'songs' => 'a'
         ],
        
         [
             'id' => '3',
-            'title' => 'rock'
+            'title' => 'rock',
+            'songs' => 'a'
         ],
         
         [
             'id' => '4',
-            'title' => 'hardstyle'
+            'title' => 'hardstyle',
+            'songs' => 'a'
         ],
         
         [
             'id' => '5',
-            'title' => 'kpop'
+            'title' => 'kpop',
+            'songs' => 'a'
         ]
     	];
     }
@@ -40,7 +45,4 @@
     		}		
     	}
   	}
-
-    public function getId(Requests $request, $id) {
-    }
 }
